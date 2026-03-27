@@ -11,6 +11,17 @@ This script will work on Ubuntu and probably other distros of the same families,
 ✅ Ubuntu 22</br>
 ✅ Ubuntu 24</br>
 
+for Ubuntu 24.04 before install run this
+
+apt update && apt upgrade -y
+
+echo "HostKeyAlgorithms +ssh-rsa" >> /etc/ssh/sshd_config.d/50-cloud-init.conf.conf
+echo "PubkeyAcceptedKeyTypes +ssh-rsa" >> /etc/ssh/sshd_config.d/50-cloud-init.conf.conf
+
+systemctl restart sshd # (systemctl restart ssh #for u24)
+
+wget http://de.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+
 >[!TIP]
 > <b>Script crack automate Xui.One</b>
 
