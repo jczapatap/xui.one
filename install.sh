@@ -46,6 +46,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python2.7 python2.7-dev u
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python2.8 python2.8-dev unzip >/dev/null 2>&1
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python3 python3-dev unzip >/dev/null 2>&1
 cd /root
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 wget https://github.com/amidevous/xui.one/releases/download/test/XUI_1.5.12.zip -O XUI_1.5.12.zip >/dev/null 2>&1
 unzip XUI_1.5.12.zip >/dev/null 2>&1
 wget https://raw.githubusercontent.com/amidevous/xui.one/master/install.python3 -O /root/install.python3 >/dev/null 2>&1
